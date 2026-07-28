@@ -7,6 +7,12 @@
 // Language    java15
 // Status      Accepted
 // Submitted   2026-07-28, 12:16 p.m.
+// Technique   nested-if-else-conditional-logic
+// Time        O(1)
+// Space       O(1)
+// Insight     The implementation evaluates the parity and range of the integer N to determine the output string based on the specified conditional rules.
+// Interview   Before: "I would use a series of if-else statements to check the parity and range of N." After: "The logic runs in O(1) time by checking the odd condition first, then partitioning the even cases into the three required ranges: 2-5, 6-20, and greater than 20."
+// Pitfalls    (1) Failing to correctly handle the inclusive range boundaries for 2, 5, 6, and 20.  (2) Incorrectly grouping the even number conditions, leading to overlapping logic for values greater than 20.  (3) Neglecting the requirement to print 'Weird' for all odd numbers regardless of their magnitude.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
