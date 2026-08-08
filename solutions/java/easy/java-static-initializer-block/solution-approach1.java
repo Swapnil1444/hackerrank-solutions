@@ -7,6 +7,12 @@
 // Language    java
 // Status      Accepted
 // Submitted   2026-08-09, 12:32 a.m.
+// Technique   static-initializer-block-exception-handling
+// Time        O(1)
+// Space       O(1)
+// Insight     The static initializer block executes immediately upon class loading, allowing for input validation and exception handling before the main method runs.
+// Interview   Before: "How do you handle initialization logic that might fail?" After: "I use a static block to read input and throw an exception if B or H are non-positive, ensuring O(1) validation before main executes."
+// Pitfalls    (1) Failing to handle the exception inside the static block results in a NoClassDefFoundError.  (2) Assuming the static block runs after the main method instead of before it.  (3) Incorrectly using B <= 0 or H <= 0 as the condition for throwing the required exception.
 // ──────────────────────────────────────────────────
 
 
