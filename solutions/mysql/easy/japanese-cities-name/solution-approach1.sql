@@ -6,7 +6,7 @@
 -- Platform    HackerRank
 -- Language    mysql
 -- Status      Accepted
--- Submitted   2026-09-24, 01:50 p.m.
+-- Submitted   2026-09-24, 01:52 p.m.
 -- ──────────────────────────────────────────────────
 
 SELECT name FROM city where COUNTRYCODE ="JPN";
