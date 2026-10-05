@@ -7,6 +7,12 @@
 // Language    java
 // Status      Accepted
 // Submitted   2026-10-05, 10:27 p.m.
+// Technique   range-check-exception-handling
+// Time        O(T)
+// Space       O(1)
+// Insight     The solution uses Java's exception handling to identify inputs exceeding the 64-bit long range while performing sequential range checks for smaller primitive types.
+// Interview   Before: "How do you check if a number fits in multiple primitive types?" After: "I use sequential range checks against constant bounds like Byte.MIN_VALUE. For inputs exceeding the long range, I catch the InputMismatchException to handle the O(T) complexity case where the number cannot be fitted anywhere."
+// Pitfalls    (1) Failing to handle inputs larger than Long.MAX_VALUE, which causes an InputMismatchException.  (2) Incorrectly ordering the output to match the required size-based hierarchy.  (3) Assuming all inputs fit within a long without implementing the required catch block for overflow.
 // ──────────────────────────────────────────────────
 
 import java.util.*;
